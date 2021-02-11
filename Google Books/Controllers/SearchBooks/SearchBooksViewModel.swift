@@ -21,7 +21,7 @@ class SearchBooksViewModel: BaseViewModel {
                     .observe(on: MainScheduler.instance)
                     .subscribe(onNext: { googleBooksResponse in
                         self.googleBooksResponse = googleBooksResponse
-                        let contents = Array(googleBooksResponse.items)
+                        let contents = Array(googleBooksResponse.items ?? [])
                         self.booksRelay.onNext(contents)
                         self.hidePreloader()
                     }, onError: { error in

@@ -25,15 +25,15 @@ class BookCell: UITableViewCell {
     }
     
     func setBookItem(item: BookItem, dispatchQueue: DispatchQueue) {
-        lblTitle.text = item.volumeInfo.title
-        if let authors = item.volumeInfo.authors {
+        lblTitle.text = item.volumeInfo?.title
+        if let authors = item.volumeInfo?.authors {
             lblAuthors.text = "by " +  authors.joined(separator: ", ")
         } else {
             lblAuthors.text = ""
         }
-        lblDescription.text = item.volumeInfo.subtitle
+        lblDescription.text = item.volumeInfo?.subtitle
         activityIndicator.startAnimating()
-        if let url = URL(string: item.volumeInfo.imageLinks.smallThumbnail) {
+        if let url = URL(string: item.volumeInfo?.imageLinks?.smallThumbnail ?? "") {
             imgThumbnail.af.setImage(withURL: url, progressQueue: dispatchQueue) { (imageDataResponse) in
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
