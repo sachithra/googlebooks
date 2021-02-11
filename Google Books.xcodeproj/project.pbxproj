@@ -12,7 +12,6 @@
 		E01FB3CD31E8BB32650E8680 /* Pods_Google_Books_Google_BooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A1B34F640EB32F562564C8 /* Pods_Google_Books_Google_BooksUITests.framework */; };
 		E3173AC825D54D5800E9931F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173AC725D54D5800E9931F /* AppDelegate.swift */; };
 		E3173ACA25D54D5800E9931F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173AC925D54D5800E9931F /* SceneDelegate.swift */; };
-		E3173ACC25D54D5800E9931F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173ACB25D54D5800E9931F /* ViewController.swift */; };
 		E3173ACF25D54D5800E9931F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3173ACD25D54D5800E9931F /* Main.storyboard */; };
 		E3173AD125D54D5C00E9931F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3173AD025D54D5C00E9931F /* Assets.xcassets */; };
 		E3173AD425D54D5C00E9931F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3173AD225D54D5C00E9931F /* LaunchScreen.storyboard */; };
@@ -27,6 +26,7 @@
 		E3173B3E25D557AA00E9931F /* SearchBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B3D25D557A900E9931F /* SearchBooksController.swift */; };
 		E3173B4625D557B600E9931F /* SearchBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B4525D557B600E9931F /* SearchBooksViewModel.swift */; };
 		E3173B4F25D55BB100E9931F /* GoogleBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B4E25D55BB100E9931F /* GoogleBookModel.swift */; };
+		E3173B5825D5644800E9931F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B5725D5644800E9931F /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		E3173AC425D54D5800E9931F /* Google Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3173AC725D54D5800E9931F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3173AC925D54D5800E9931F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E3173ACB25D54D5800E9931F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3173ACE25D54D5800E9931F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3173AD025D54D5C00E9931F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3173AD325D54D5C00E9931F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		E3173B3D25D557A900E9931F /* SearchBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksController.swift; sourceTree = "<group>"; };
 		E3173B4525D557B600E9931F /* SearchBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewModel.swift; sourceTree = "<group>"; };
 		E3173B4E25D55BB100E9931F /* GoogleBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBookModel.swift; sourceTree = "<group>"; };
+		E3173B5725D5644800E9931F /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,12 +157,12 @@
 		E3173AC625D54D5800E9931F /* Google Books */ = {
 			isa = PBXGroup;
 			children = (
+				E3173B5625D5643800E9931F /* Errors */,
 				E3173B4A25D557FC00E9931F /* Modals */,
 				E3173B0A25D5539D00E9931F /* Networking */,
 				E3173B0325D54F3600E9931F /* Controllers */,
 				E3173AC725D54D5800E9931F /* AppDelegate.swift */,
 				E3173AC925D54D5800E9931F /* SceneDelegate.swift */,
-				E3173ACB25D54D5800E9931F /* ViewController.swift */,
 				E3173ACD25D54D5800E9931F /* Main.storyboard */,
 				E3173AD025D54D5C00E9931F /* Assets.xcassets */,
 				E3173AD225D54D5C00E9931F /* LaunchScreen.storyboard */,
@@ -241,6 +241,14 @@
 				E3173B4E25D55BB100E9931F /* GoogleBookModel.swift */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		E3173B5625D5643800E9931F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				E3173B5725D5644800E9931F /* Errors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,10 +490,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3173B4625D557B600E9931F /* SearchBooksViewModel.swift in Sources */,
-				E3173ACC25D54D5800E9931F /* ViewController.swift in Sources */,
 				E3173B1425D553EB00E9931F /* APIRouter.swift in Sources */,
 				E3173B0C25D553D700E9931F /* NetworkingConstants.swift in Sources */,
 				E3173AC825D54D5800E9931F /* AppDelegate.swift in Sources */,
+				E3173B5825D5644800E9931F /* Errors.swift in Sources */,
 				E3173B4F25D55BB100E9931F /* GoogleBookModel.swift in Sources */,
 				E3173ACA25D54D5800E9931F /* SceneDelegate.swift in Sources */,
 				E3173B3825D5572D00E9931F /* BaseViewModel.swift in Sources */,

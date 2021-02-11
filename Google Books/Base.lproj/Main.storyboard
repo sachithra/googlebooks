@@ -47,6 +47,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Google Books" id="kuk-3d-cmr"/>
+                    <connections>
+                        <outlet property="tblBooks" destination="dAi-dM-cyB" id="Q8Q-s2-ZfY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmU-oU-GUD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
