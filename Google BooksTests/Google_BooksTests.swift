@@ -6,6 +6,9 @@
 //
 
 import XCTest
+import RxSwift
+import RxCocoa
+
 @testable import Google_Books
 
 class Google_BooksTests: XCTestCase {
@@ -30,4 +33,25 @@ class Google_BooksTests: XCTestCase {
         }
     }
 
+    func testBookSearchRequest() throws {
+        let expectations = expectation(description: "The response result match the expected results")
+        let disposeBag = DisposeBag()
+        ApiClient.searchBooks(query: "flowers")
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { response in
+                print("Book search response:", response)
+                expectations.fulfill()
+            }, onError: { error in
+                XCTFail("Server response failed : \(error.localizedDescription)")
+                expectations.fulfill()
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        waitForExpectations(timeout: 30, handler: { (error) in
+            if let error = error {
+                print("Failed : \(error.localizedDescription)")
+            }
+        })
+    }
 }

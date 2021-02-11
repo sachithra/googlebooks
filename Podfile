@@ -8,6 +8,7 @@ target 'Google Books' do
   # Pods for Google Books
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Alamofire', '~> 5.2'
 
   target 'Google BooksTests' do
     inherit! :search_paths
