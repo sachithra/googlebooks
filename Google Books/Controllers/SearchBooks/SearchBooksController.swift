@@ -30,8 +30,9 @@ class SearchBooksController: BaseController {
     
     func setupObservables() {
         searchController.searchBar.rx.text.orEmpty
-                .debounce(.milliseconds(1500), scheduler: MainScheduler.instance)
-                .subscribe(onNext: { [unowned self] (query) in
+            .filter { $0 != nil && $0?.isEmpty == false }
+            .debounce(.milliseconds(1500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] (query) in
                     print(query)
                     self.viewModel.searchBooks(query: query)
                 }).disposed(by: self.disposeBag)
