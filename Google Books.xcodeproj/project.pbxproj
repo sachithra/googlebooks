@@ -27,6 +27,9 @@
 		E3173B4625D557B600E9931F /* SearchBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B4525D557B600E9931F /* SearchBooksViewModel.swift */; };
 		E3173B4F25D55BB100E9931F /* GoogleBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B4E25D55BB100E9931F /* GoogleBookModel.swift */; };
 		E3173B5825D5644800E9931F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B5725D5644800E9931F /* Errors.swift */; };
+		E3173B5F25D5656700E9931F /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B5D25D5656700E9931F /* BookCell.swift */; };
+		E3173B6025D5656700E9931F /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3173B5E25D5656700E9931F /* BookCell.xib */; };
+		E3173B8825D56F4700E9931F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3173B8725D56F4700E9931F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		E3173B4525D557B600E9931F /* SearchBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewModel.swift; sourceTree = "<group>"; };
 		E3173B4E25D55BB100E9931F /* GoogleBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBookModel.swift; sourceTree = "<group>"; };
 		E3173B5725D5644800E9931F /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		E3173B5D25D5656700E9931F /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		E3173B5E25D5656700E9931F /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
+		E3173B8725D56F4700E9931F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		E3173AC625D54D5800E9931F /* Google Books */ = {
 			isa = PBXGroup;
 			children = (
+				E3173B8625D56F3200E9931F /* Constants */,
 				E3173B5625D5643800E9931F /* Errors */,
 				E3173B4A25D557FC00E9931F /* Modals */,
 				E3173B0A25D5539D00E9931F /* Networking */,
@@ -213,6 +220,7 @@
 		E3173B2C25D5569600E9931F /* SearchBooks */ = {
 			isa = PBXGroup;
 			children = (
+				E3173B5C25D5653400E9931F /* Cells */,
 				E3173B3D25D557A900E9931F /* SearchBooksController.swift */,
 				E3173B4525D557B600E9931F /* SearchBooksViewModel.swift */,
 			);
@@ -249,6 +257,23 @@
 				E3173B5725D5644800E9931F /* Errors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		E3173B5C25D5653400E9931F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E3173B5D25D5656700E9931F /* BookCell.swift */,
+				E3173B5E25D5656700E9931F /* BookCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E3173B8625D56F3200E9931F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E3173B8725D56F4700E9931F /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3173B6025D5656700E9931F /* BookCell.xib in Resources */,
 				E3173AD425D54D5C00E9931F /* LaunchScreen.storyboard in Resources */,
 				E3173AD125D54D5C00E9931F /* Assets.xcassets in Resources */,
 				E3173ACF25D54D5800E9931F /* Main.storyboard in Resources */,
@@ -493,12 +519,14 @@
 				E3173B1425D553EB00E9931F /* APIRouter.swift in Sources */,
 				E3173B0C25D553D700E9931F /* NetworkingConstants.swift in Sources */,
 				E3173AC825D54D5800E9931F /* AppDelegate.swift in Sources */,
+				E3173B5F25D5656700E9931F /* BookCell.swift in Sources */,
 				E3173B5825D5644800E9931F /* Errors.swift in Sources */,
 				E3173B4F25D55BB100E9931F /* GoogleBookModel.swift in Sources */,
 				E3173ACA25D54D5800E9931F /* SceneDelegate.swift in Sources */,
 				E3173B3825D5572D00E9931F /* BaseViewModel.swift in Sources */,
 				E3173B3E25D557AA00E9931F /* SearchBooksController.swift in Sources */,
 				E3173B1925D5540000E9931F /* APIClient.swift in Sources */,
+				E3173B8825D56F4700E9931F /* Constants.swift in Sources */,
 				E3173B3025D5572000E9931F /* BaseController.swift in Sources */,
 				E3173B1E25D5540E00E9931F /* Connectivity.swift in Sources */,
 			);

@@ -11,11 +11,11 @@ import Foundation
 struct GoogleBookModel: Codable {
     let kind: String
     let totalItems: Int
-    let items: [Item]
+    let items: [BookItem]
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct BookItem: Codable {
     let kind: Kind
     let id, etag: String
     let selfLink: String
